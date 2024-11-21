@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Incident Severity Assessment</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="glossary.css" />
+</head>
+<body>
+    <header>
+        <img src="trellix-logo.png" alt="Trellix Logo" />
+        <h1>Incident Severity Assessment</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="glossary.html">Pre-Sales Engineer</a></li>
+            <li><a href="faq.html">Operations & Support</a></li>
+            <li><a href="severity.html">Professional Services</a></li>
+            <li><a href="pain-points.html">Sales & Marketing</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="term-box assessment-container">
+            <div class="term-title">Incident Severity Assessment</div>
+            <form id="severityForm">
+                <label for="impactScope">Impact Scope (Percentage of Users/Devices Affected):</label>
+                <input type="number" id="impactScope" name="impactScope" min="0" max="100" required><br><br>
+
+                <label for="dataIntegrity">Data Integrity Impact:</label>
+                <select id="dataIntegrity" name="dataIntegrity" required>
+                    <option value="none">None</option>
+                    <option value="partial">Partial</option>
+                    <option value="significant">Significant</option>
+                </select><br><br>
+
+                <label for="securityRisk">Security Implications:</label>
+                <select id="securityRisk" name="securityRisk" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select><br><br>
+
+                <label for="complianceConcern">Compliance Concerns:</label>
+                <select id="complianceConcern" name="complianceConcern" required>
+                    <option value="none">None</option>
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                </select><br><br>
+
+                <button type="button" onclick="calculateSeverity()">Calculate Severity</button>
+            </form>
+            <div id="severityResult" class="term-description severity-result">
+                Severity Level: 
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Trellix Incident Severity Assessment Tool.
+    </footer>
+
+    <script src="severity.js"></script>
+</body>
+</html>

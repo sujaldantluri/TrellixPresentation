@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ Chatbot</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="glossary.css" />
+</head>
+<body>
+    <header>
+        <img src="trellix-logo.png" alt="Trellix Logo" />
+        <h1>FAQ Chatbot</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="glossary.html">Pre-Sales Engineer</a></li>
+            <li><a href="faq.html">Operations & Support</a></li>
+            <li><a href="severity.html">Professional Services</a></li>
+            <li><a href="pain-points.html">Sales & Marketing</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="chat-window">
+            <div class="chat-messages" id="chatMessages"></div>
+            
+            <div class="chat-input">
+                <label for="faqOptions">Choose a question:</label>
+                <select id="faqOptions">
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="What is XDR?">What is XDR?</option>
+                    <option value="What is the difference between XDR and EDR?">What is the difference between XDR and EDR?</option>
+                    <option value="How can Trellix help with threat detection?">How can Trellix help with threat detection?</option>
+                    <option value="What is endpoint security?">What is endpoint security?</option>
+                    <option value="Why should I use threat intelligence?">Why should I use threat intelligence?</option>
+                    <option value="What types of attacks can Trellix help prevent?">What types of attacks can Trellix help prevent?</option>
+                    <option value="How does Trellix handle alert fatigue?">How does Trellix handle alert fatigue?</option>
+                    <option value="Does Trellix support cloud security?">Does Trellix support cloud security?</option>
+                    <option value="Can Trellix help with regulatory compliance?">Can Trellix help with regulatory compliance?</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="button" onclick="handleOptionSelect()">Send</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Trellix FAQ Chatbot.
+    </footer>
+
+    <script src="faq.js"></script>
+</body>
+</html>
